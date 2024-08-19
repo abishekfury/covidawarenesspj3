@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet " href="./test.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="navbar">
+        <ul>
+            <li><a href="./index.html">COVID-19</a></li>
+            <li><a href="./country.html">countries</a></li>
+            <li><a href="./campaign.html">Campaign</a></li>
+            <li><a href="./test.html">Test</a></li>        
+        </ul>
+        <hr>
+    </div>
+
+    <div class="sidenavbar">
+        <ol>
+            <li><a href="#side">What is a Coronavirus?</a></li>
+            <li><a href="#side">Introduction</a></li>
+            <li><a href="#side">Methods</a></li>
+            <li><a href="#side">Results</a></li>
+            <li><a href="#side">COVID-19 PREVENTION</a></li>
+            <li><a href="#side">Discussion</a></li>
+            <li><a href="#side">Conclusion</a></li>
+            <li><a href="#side">COVID Awareness Campaign</a></li>
+           
+        </ol>
+    </div>
+
+    <div class="section1">
+        <h1 >IN the COVID-19 section:</h1>
+        <h5 >COVID-19 Test</h5>
+    </div>
+
+    <div class="section4">
+        <form>
+            <div class="form-group2">
+            <label for="fname">USERNAME:</label>
+            <input type="text" id="name">
+            </div>
+
+            <div class="form-group2">
+            <label for="number">PHONE NUMBER:</label>
+            <input type="number" id="phnumber1">
+            </div>  
+
+            <div class="form-group2">
+            <label for="number">AGE:</label>
+            <input type="number" id="age1">
+            </div>
+        
+            <button type="button" onclick="form_submit()">CHECK ELIGIBITY</button>
+            <h5 id="output2" style="color: #45a049;" ></h5>
+
+        </form>
+    </div>         
+    
+    
+    <div class="section5">
+        <h5>COVID-19 Appoinment</h5>
+    </div>
+          
+
+    <div class="form-container">
+        <form>
+            <div class="form-group">
+                <label for="user_name">ENTER YOUR NAME:</label>
+                <input type="text" id="user_name">
+            </div>
+
+            <div class="form-group">
+                <label for="age">ENTER YOUR AGE:</label>
+                <input type="number" id="age">
+            </div>
+
+            <div class="form-group">
+                <label for="phnumber">ENTER YOUR NUMBER:</label>
+                <input type="number" id="phnumber">
+            </div>
+
+            <div class="form-group">
+                <label for="pincode">ENTER YOUR PINCODE:</label>
+                <input type="number" id="pincode">
+            </div>
+
+            <button type="button" onclick="login_submit()">BOOK AN APPOINTMENT</button>
+            <h5 id="output3" style="color: #45a049;"></h5>
+        </form>
+    </div>
+    <!-- <h5 id="output1" style="color: #45a049;" ></h5> -->
+
+    <div class="box1">
+    <table>
+         <tr>
+            <th>Username</th>
+            <th>Age</th>
+            <th>Ph Number</th>
+            <th>Pincode</th>
+            
+        </tr>
+    
+        <tr>
+            <td id="user1"></td>
+            <td id="age2"></td>
+            <td id="number1"></td>
+            <td id="pincode1"></td>
+        </tr>
+        
+    </table>
+   </div>
+                                                                                                                                                        
+    <script>
+
+        function login_submit(){
+            var user_name=document.getElementById('user_name').value;
+            console.log(user_name);
+            
+            var age=document.getElementById('age').value;
+            console.log(age);
+
+            var phnumber=document.getElementById('phnumber').value;
+            console.log(phnumber);
+
+            var pincode=document.getElementById('pincode').value;
+            console.log(pincode);
+
+            document.getElementById('user1').innerHTML=user_name;
+            document.getElementById('age2').innerHTML=age;
+            document.getElementById('number1').innerHTML=phnumber;
+            document.getElementById('pincode1').innerHTML=pincode;
+
+            document.getElementById('output3').innerHTML="Thanks Booked"+user_name;
+        }
+        
+        function form_submit(){
+            var name=document.getElementById('name').value;
+            console.log(name);
+
+            var age1=document.getElementById('age1').value;
+            console.log(age1);
+
+            if (age1>=18){
+                document.getElementById('output2').innerHTML="YOU ARE ELIGIBILE "+name;
+            }
+            else{
+                document.getElementById('output2').innerHTML="YOU ARE NOT ELIGIBILE "+name;
+            }
+
+            var phnumber1=document.getElementById('phnumber1').value;
+            console.log(phnumber1);
+        }
+    </script>
+    
+
+
+
+
+
+    <div class="section3">
+        <nav aria-label="Page navigation example">
+           <ul class="pagination">
+             <li class="page-item">
+               <a class="page-link" href="#" aria-label="Previous">
+                 <span aria-hidden="true">&laquo;</span>
+               </a>
+             </li>
+             <li class="page-item"><a class="page-link" href="./index.css">1</a></li>
+             <li class="page-item"><a class="page-link" href="./country.html">2</a></li>
+             <li class="page-item"><a class="page-link" href="./campaign.html">3</a></li>
+             <li class="page-item">
+               <a class="page-link" href="#" aria-label="Next">
+                 <span aria-hidden="true">&raquo;</span>
+               </a>
+             </li>
+           </ul>
+         </nav>
+       </div>
+
+
+
+    
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Your Company. All rights reserved.</p>
+            <ul class="footer-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+    
+</body>
+</html>
